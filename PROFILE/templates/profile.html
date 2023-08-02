@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    {% if miFormulario.errors %}
+    <p style="color: red;">Están mal los datos, revisar.</p>
+    {% endif %}
+
+    <p>Estamos buscando el: {{perfil}}</p>
+
+    {% if cursos %}
+        <ul>
+            {% for perfil in perfiles %}
+                <li> {perfiles} </li>
+                <li> {{curso.camada}} </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock %}
